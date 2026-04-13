@@ -29,10 +29,10 @@ url: "https://tillybrooks.github.io"  # Your GitHub Pages root URL
 # --- Navigation links ---
 # These appear in the top navbar. You can add, remove, or rename items.
 nav-links:
+  - title: "Mission"
+    url: "#mission"
   - title: "About"
     url: "#about"
-  - title: "Research"
-    url: "#research"
   - title: "Team"
     url: "#team"
   - title: "Contact"

@@ -5,7 +5,6 @@
 ============================================================= */
 
 /* --- Brand color: override the theme's blue with your orange --- */
-/* #bd5e39 is used anywhere the theme previously used its blue primary */
 
 /* Section backgrounds (e.g. About, Contact) */
 .bg-primary {
@@ -22,10 +21,10 @@
 .btn-primary:focus,
 .btn-primary:active {
     border-color: #a04e30 !important;
-    background-color: #a04e30 !important;   /* slightly darker on hover */
+    background-color: #a04e30 !important;
 }
 
-/* Icon colors in the research cards */
+/* Icon colors in the research/mission cards */
 .text-primary {
     color: #bd5e39 !important;
 }
@@ -41,13 +40,21 @@ hr.primary {
     color: #bd5e39 !important;
 }
 
-/* --- Fix: navbar overlapping the hero header ---
-   The navbar is fixed to the top of the screen (50px tall).
-   .header-content has padding-top built in, but it's not quite
-   enough to clear the navbar when the title has multiple lines.
-   Bumping padding-top here pushes the hero text comfortably below it. */
+/* --- Fix: navbar overlapping the hero header --- */
 .header-content {
     padding-top: 34px !important;
+}
+
+/* --- Space between the hero "Learn More" button and the first section ---
+   Adds breathing room at the bottom of the header before the next section begins. */
+.header-content-inner {
+    padding-bottom: 60px;
+}
+
+/* --- "Learn More" button: larger font size --- */
+.btn-xl {
+    font-size: 20px !important;
+    padding: 20px 40px !important;
 }
 
 /* --- Section padding --- */
@@ -55,22 +62,27 @@ section {
     padding: 17px 0 !important;
 }
 
-/* --- Wider horizontal margins on the page --- */
+/* --- Wider horizontal margins ---
+   Bootstrap 3's .container has 15px side padding by default and a fixed
+   max-width. We constrain the max-width further and add generous padding
+   so content never runs close to the browser edge. */
 .container {
-    padding-left: 40px;
-    padding-right: 40px;
+    max-width: 1000px !important;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
 }
 
 /* --- Responsive: scale back on smaller screens --- */
 @media (max-width: 768px) {
     .container {
-        padding-left: 20px;
-        padding-right: 20px;
+        max-width: 100% !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
     }
     section {
-        padding: 80px 0;
+        padding: 40px 0 !important;
     }
     .header-content {
-        padding-top: 120px;
+        padding-top: 120px !important;
     }
 }
