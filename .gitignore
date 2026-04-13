@@ -1,0 +1,12 @@
+# Jekyll build output — don't commit the generated site
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler — local Ruby dependencies
+vendor/
+.bundle/
+
+# macOS junk
+.DS_Store

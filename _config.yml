@@ -1,0 +1,36 @@
+# =====================================================
+# _config.yml — Jekyll site configuration
+# This file controls global settings for your site.
+# Lines starting with # are comments (ignored by Jekyll).
+# =====================================================
+
+# --- Basic site info ---
+title: "California Racial Justice Act Research Collective"
+description: "Interdisciplinary research on the California Racial Justice Act"
+baseurl: ""          # Leave empty for a username.github.io site
+url: "https://crjarc.github.io"
+
+# --- Theme ---
+# This tells GitHub Pages to use the Creative theme directly from GitHub.
+# You don't need to copy theme files — GitHub fetches them automatically.
+remote_theme: volny/creative-theme-jekyll
+
+# --- Navigation links ---
+# These appear in the top navbar. You can add, remove, or rename items.
+nav-links:
+  - title: "About"
+    url: "#about"
+  - title: "Research"
+    url: "#research"
+  - title: "Team"
+    url: "#team"
+  - title: "Contact"
+    url: "#contact"
+
+# --- Plugins ---
+# github-pages plugin ensures compatibility with GitHub's build system.
+plugins:
+  - jekyll-remote-theme
+
+# --- Build settings ---
+markdown: kramdown    # The markdown parser Jekyll uses
