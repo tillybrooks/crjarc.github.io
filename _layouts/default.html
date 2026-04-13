@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <!-- Bootstrap 3 CSS (the Creative theme is built on Bootstrap 3) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Font Awesome icons (used in the research area cards) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Animate.css (used for scroll-triggered animations) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <!-- Creative theme CSS — loaded directly from the theme's GitHub repo via jsDelivr CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/volny/creative-theme-jekyll@master/css/creative.css">
+</head>
+
+<body id="page-top">
+
+    <!-- =====================================================
+      NAVIGATION BAR
+      Reads nav links from _config.yml (site.nav-links).
+      The JS below makes it shrink/change color on scroll.
+    ===================================================== -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Mobile hamburger button -->
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Site name in navbar (links back to top) -->
+                <a class="navbar-brand page-scroll" href="#page-top">{{ site.title }}</a>
+            </div>
+            <!-- Nav links from _config.yml -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    {% for link in site.nav-links %}
+                    <li>
+                        <a class="page-scroll" href="{{ link.url }}">{{ link.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page content is injected here from index.html -->
+    {{ content }}
+
+    <!-- =====================================================
+      FOOTER
+      Simple centered copyright line.
+      Edit the text here if you want something different.
+    ===================================================== -->
+    <footer>
+        <div class="container text-center">
+            <p>
+                &copy; {{ site.title }} {{ "now" | date: "%Y" }}
+            </p>
+        </div>
+    </footer>
+
+    <!-- =====================================================
+      SCRIPTS
+      Order matters: jQuery first, then Bootstrap, then plugins.
+    ===================================================== -->
+
+    <!-- jQuery (required by Bootstrap and the Creative theme JS) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Bootstrap JS (powers the mobile navbar collapse) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- jQuery Easing (smooth scroll animation curve) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- ScrollReveal (animates elements as they scroll into view) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/3.3.6/scrollreveal.min.js"></script>
+
+    <!-- Creative theme JS — handles navbar shrink on scroll + smooth scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/volny/creative-theme-jekyll@master/js/creative.js"></script>
+
+</body>
+</html>

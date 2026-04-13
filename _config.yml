@@ -7,13 +7,24 @@
 # --- Basic site info ---
 title: "California Racial Justice Act Research Collective"
 description: "Interdisciplinary research on the California Racial Justice Act"
-baseurl: ""          # Leave empty for a username.github.io site
-url: "https://crjarc.github.io"
+baseurl: "/crjarc.github.io"   # The subpath of the site (repo name = project page)
+url: "https://tillybrooks.github.io"  # Your GitHub Pages root URL
+
+# NOTE on the URL situation:
+# Because this repo is named "crjarc.github.io" but your GitHub username is
+# "tillybrooks", GitHub treats it as a project page at:
+#   https://tillybrooks.github.io/crjarc.github.io/
+#
+# To get a clean URL like https://crjarc.github.io you have two options:
+#   Option A: Create a free GitHub Organization called "crjarc", move the repo
+#             there, and it becomes crjarc.github.io automatically.
+#   Option B: Rename the repo to "tillybrooks.github.io" — but then the URL
+#             reflects your personal username, not the project.
+# We can tackle this whenever you're ready — it's easy to change later.
 
 # --- Theme ---
-# This tells GitHub Pages to use the Creative theme directly from GitHub.
-# You don't need to copy theme files — GitHub fetches them automatically.
-remote_theme: volny/creative-theme-jekyll
+# We now use a local _layouts/default.html instead of remote_theme.
+# This is more reliable. No theme setting needed here.
 
 # --- Navigation links ---
 # These appear in the top navbar. You can add, remove, or rename items.
@@ -30,7 +41,7 @@ nav-links:
 # --- Plugins ---
 # github-pages plugin ensures compatibility with GitHub's build system.
 plugins:
-  - jekyll-remote-theme
+  - jekyll-seo-tag
 
 # --- Build settings ---
 markdown: kramdown    # The markdown parser Jekyll uses
