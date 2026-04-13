@@ -45,6 +45,11 @@ hr.primary {
     padding-top: 34px !important;
 }
 
+/* --- Push hero text away from the left edge --- */
+header {
+    margin-left: 10px;
+}
+
 /* --- Space between the hero "Learn More" button and the first section ---
    Adds breathing room at the bottom of the header before the next section begins. */
 .header-content-inner {
