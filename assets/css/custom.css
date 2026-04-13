@@ -47,12 +47,12 @@ hr.primary {
    enough to clear the navbar when the title has multiple lines.
    Bumping padding-top here pushes the hero text comfortably below it. */
 .header-content {
-    padding-top: 34px;
+    padding-top: 34px !important;
 }
 
-/* --- More breathing room on sections --- */
+/* --- Section padding --- */
 section {
-    padding: 17px 0;
+    padding: 17px 0 !important;
 }
 
 /* --- Wider horizontal margins on the page --- */
