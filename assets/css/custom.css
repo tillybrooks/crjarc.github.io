@@ -77,7 +77,7 @@ header {
 /* --- Space between the hero "Learn More" button and the first section ---
    Adds breathing room at the bottom of the header before the next section begins. */
 .header-content-inner {
-    padding-bottom: 60px;
+    padding-bottom: 10px;
 }
 
 /* --- "Learn More" button: larger font size --- */
