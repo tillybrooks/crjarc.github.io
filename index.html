@@ -82,31 +82,76 @@ layout: default
 </section>
 
 <!-- ============================================================
-  MISSION SECTION
-  Four cards describing the core areas of work.
+  MISSION SECTION — orange
+  A short statement of the collective's core mission.
+  - Edit the <p> tags with your mission statement text.
+============================================================ -->
+<section class="bg-primary" id="mission">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h2 class="section-heading">Our Mission</h2>
+        <hr class="light">
+        <p class="text-faded" style="font-size:20px;">
+          [Placeholder — one or two sentences stating the collective's core mission.]
+        </p>
+        <p class="text-faded" style="font-size:20px;">
+          [Placeholder — optional second paragraph expanding on the mission.]
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  VISION SECTION — white
+  A short statement of the collective's long-term vision.
+  - Edit the <p> tags with your vision statement text.
+============================================================ -->
+<section id="vision" style="background-color: #fff;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h2 class="section-heading" style="color: #333;">Our Vision</h2>
+        <hr class="primary">
+        <p style="font-size:20px; color: #555;">
+          [Placeholder — describe the long-term change or outcome the collective is
+          working toward.]
+        </p>
+        <p style="font-size:20px; color: #555;">
+          [Placeholder — optional second paragraph.]
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  OBJECTIVES SECTION — orange
+  Icon cards describing the collective's concrete objectives.
   - Each <div class="col-lg-3..."> is one card
-  - Icons use Font Awesome — see fontawesome.com/v4/icons for options
-  - Edit the <h3> for the card title and <p> for a short description
+  - Icons use Font Awesome 4 — browse options at fontawesome.com/v4/icons
+  - Edit the <h3> for the objective title and <p> for a short description
   - Add/remove cards by copying/deleting entire <div class="col-lg-3..."> blocks
 ============================================================ -->
-<section id="mission">
+<section class="bg-primary" id="objectives">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading">Our Mission</h2>
-        <hr class="primary">
+        <h2 class="section-heading">Our Objectives</h2>
+        <hr class="light">
       </div>
     </div>
   </div>
   <div class="container">
     <div class="row">
 
-      <!-- Mission area 1 -->
+      <!-- Objective 1 -->
       <div class="col-lg-3 col-md-6 text-center">
         <div class="service-box">
-          <i class="fa fa-4x fa-balance-scale text-primary sr-icons"></i>
-          <h3>Support RJA Litigation</h3>
-          <p class="text-muted">
+          <i class="fa fa-4x fa-balance-scale sr-icons" style="color:#fff;"></i>
+          <h3 style="color:#fff;">Support RJA Litigation</h3>
+          <p class="text-faded">
             Provide expert testimony, research, and analysis to strengthen individual RJA cases.
             Help build long-term infrastructure for supporting RJA claims across jurisdictions.
             <!-- maybe discuss exact phrasing on this with carlie but -->
@@ -114,36 +159,37 @@ layout: default
         </div>
       </div>
 
-      <!-- Mission area 2 -->
+      <!-- Objective 2 -->
       <div class="col-lg-3 col-md-6 text-center">
         <div class="service-box">
-          <i class="fa fa-4x fa-line-chart text-primary sr-icons"></i>
-          <h3>Produce Statistical Evidence </h3>
-          <p class="text-muted">
+          <i class="fa fa-4x fa-line-chart sr-icons" style="color:#fff;"></i>
+          <h3 style="color:#fff;">Produce Statistical Evidence</h3>
+          <p class="text-faded">
             Conduct rigorous quantitative analyses that identify and document
             racial disparities in legal outcomes.
           </p>
         </div>
       </div>
 
-      <!-- Mission area 3 -->
+      <!-- Objective 3 -->
       <div class="col-lg-3 col-md-6 text-center">
         <div class="service-box">
-          <i class="fa fa-4x fa-users text-primary sr-icons"></i>
-          <h3>Build Accessible Knowledge</h3>
-          <p class="text-muted">
-            Develop accessible summaries of social science literature for use by public defenders and legal teams.
-          <!--another minor note on languaeg here; curated might undermine credibility (even though it's true lmao)-->
+          <i class="fa fa-4x fa-users sr-icons" style="color:#fff;"></i>
+          <h3 style="color:#fff;">Build Accessible Knowledge</h3>
+          <p class="text-faded">
+            Develop accessible summaries of social science literature for use by
+            public defenders and legal teams.
+            <!--another minor note on language here-->
           </p>
         </div>
       </div>
 
-      <!-- Mission area 4 -->
+      <!-- Objective 4 -->
       <div class="col-lg-3 col-md-6 text-center">
         <div class="service-box">
-          <i class="fa fa-4x fa-file-text-o text-primary sr-icons"></i>
-          <h3>Translate Research into Practie</h3>
-          <p class="text-muted">
+          <i class="fa fa-4x fa-file-text-o sr-icons" style="color:#fff;"></i>
+          <h3 style="color:#fff;">Translate Research into Practice</h3>
+          <p class="text-faded">
             Translate primary and secondary research findings into actionable policy
             recommendations for legislators and practitioners.
           </p>
@@ -155,46 +201,16 @@ layout: default
 </section>
 
 <!-- ============================================================
-  PUBLICATIONS / OUTPUTS SECTION (optional — delete if not needed)
-  A simple list of working papers, reports, or publications.
-  - Add <li> items for each paper or output
-============================================================ -->
-<section class="bg-dark" id="publications">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 text-center">
-        <h2 class="section-heading">Publications & Working Papers</h2>
-        <hr class="light">
-        <ul class="list-unstyled text-faded" style="text-align:left; margin-top: 1.5em;">
-          <li style="margin-bottom: 1em;">
-            [Placeholder] Author A &amp; Author B (2025). "Title of working paper."
-            <em>Working paper.</em>
-            <a href="#" class="text-faded" style="text-decoration:underline;">[PDF]</a>
-          </li>
-          <li style="margin-bottom: 1em;">
-            [Placeholder] Author A (2024). "Title of another paper."
-            <em>Journal Name</em>, Vol(Issue), pp–pp.
-            <a href="#" class="text-faded" style="text-decoration:underline;">[Link]</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-  TEAM SECTION
+  TEAM SECTION — white
   Photos and bios for each team member.
-  - Replace "Researcher Name" with the person's name
-  - Replace "Title / Affiliation" with their role
-  - Replace the placeholder <img> src with a real photo path once you have one
   - Add/remove <div class="col-md-4"> blocks for more/fewer people
+  - Replace placeholder <img> src with real photo paths as needed
 ============================================================ -->
-<section id="team">
+<section id="team" style="background-color: #fff;">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading">The Team</h2>
+        <h2 class="section-heading" style="color: #333;">The Team</h2>
         <hr class="primary">
       </div>
     </div>
@@ -214,37 +230,83 @@ layout: default
       <!-- Team member 2 -->
       <div class="col-md-4 col-sm-6 text-center" style="margin-bottom: 2em;">
         <img src="{{ site.baseurl }}/assets/tmg_headshot.png"
-             alt="Researcher Name"
+             alt="Tanajia Moye-Green"
              class="img-circle img-responsive"
              style="width:150px; height:150px; object-fit:cover; margin: 0 auto 1em;">
-        <h4>Tanajia Moye-Green </h4>
+        <h4>Tanajia Moye-Green</h4>
         <p class="text-muted">Ph.D. Student / Stanford University</p>
         <p>Quantitative sociologist [more description].</p>
       </div>
 
-      <!-- Add more team members by copying the block above -->
+      <!-- Add more team members by copying a block above -->
 
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-  CONTACT SECTION
-  A simple email/contact block. No backend needed — just a mailto link.
-  - Replace the email address in both places below
-  - Update the text as needed
+  WORK WITH US SECTION — orange
+  Three subsections describing how the collective works with external partners.
+  - Edit each <h3> and <p> within the three subsection columns
+  - Add more columns by copying a <div class="col-md-4..."> block
 ============================================================ -->
-<section id="contact" class="bg-primary">
+<section class="bg-primary" id="work-with-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Work With Us</h2>
+        <hr class="light">
+      </div>
+    </div>
+    <div class="row" style="margin-top: 2em;">
+
+      <!-- Subsection 1 -->
+      <div class="col-md-4 text-center" style="margin-bottom: 2em;">
+        <h3 class="text-faded" style="margin-bottom: 0.75em;">How We Can Support Your Case</h3>
+        <p class="text-faded">
+          [Placeholder — describe the types of support the collective offers to legal
+          teams: e.g. statistical analysis, expert reports, literature reviews, testimony.]
+        </p>
+      </div>
+
+      <!-- Subsection 2 -->
+      <div class="col-md-4 text-center" style="margin-bottom: 2em;">
+        <h3 class="text-faded" style="margin-bottom: 0.75em;">Who We Work With</h3>
+        <p class="text-faded">
+          [Placeholder — describe who the collective partners with: public defenders,
+          civil rights organizations, advocacy groups, etc.]
+        </p>
+      </div>
+
+      <!-- Subsection 3 -->
+      <div class="col-md-4 text-center" style="margin-bottom: 2em;">
+        <h3 class="text-faded" style="margin-bottom: 0.75em;">What to Expect</h3>
+        <p class="text-faded">
+          [Placeholder — describe the process of working with the collective: how to
+          reach out, typical timeline, what engagement looks like.]
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  GET IN TOUCH SECTION — white
+  Simple contact block with a mailto button.
+  - Replace your@email.edu with your actual contact email
+============================================================ -->
+<section id="contact" style="background-color: #fff;">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 text-center">
-        <h2 class="section-heading">Get in Touch</h2>
-        <hr class="light">
-        <p class="text-faded">
+        <h2 class="section-heading" style="color: #333;">Get in Touch</h2>
+        <hr class="primary">
+        <p style="font-size:18px; color: #555;">
           Interested in our research, collaboration opportunities, or media inquiries?
           We'd love to hear from you.
         </p>
-        <a href="mailto:your@email.edu" class="btn btn-default btn-xl">
+        <a href="mailto:your@email.edu" class="btn btn-primary btn-xl">
           Contact Us
         </a>
       </div>

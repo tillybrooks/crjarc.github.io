@@ -35,6 +35,8 @@ nav-links:
     url: "#mission"
   - title: "Team"
     url: "#team"
+  - title: "Work With Us"
+    url: "#work-with-us"
   - title: "Contact"
     url: "#contact"
 
