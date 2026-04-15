@@ -50,11 +50,19 @@ hr.primary {
     color: #fff !important;
 }
 
-/* Slightly translucent on hover instead of the old orange-on-white */
+/* Slightly translucent on hover */
 #mainNav.navbar-default .navbar-nav > li > a:hover,
 #mainNav.navbar-default .navbar-nav > li > a:focus {
     color: rgba(255, 255, 255, 0.75) !important;
     background-color: transparent !important;
+}
+
+/* Active section indicator: dark brown instead of Bootstrap's default gray */
+#mainNav.navbar-default .navbar-nav > .active > a,
+#mainNav.navbar-default .navbar-nav > .active > a:hover,
+#mainNav.navbar-default .navbar-nav > .active > a:focus {
+    color: #fff !important;
+    background-color: #5c2e0e !important;
 }
 
 /* Mobile hamburger button */
@@ -78,10 +86,16 @@ hr.primary {
     flex-wrap: wrap;
 }
 
-/* Left column: left-align the text (overrides the theme's text-center) */
+/* Left column: left-align the text, hugging the left margin */
 .header-text {
     text-align: left;
+    padding-left: 0 !important;
     padding-right: 40px;
+}
+
+/* Pull the header container to the left edge */
+.header-content .container {
+    padding-left: 10px !important;
 }
 
 /* Right column: some breathing room above on small screens */

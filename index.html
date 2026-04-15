@@ -39,27 +39,25 @@ layout: default
         <div class="col-md-6 header-carousel-col">
           <div id="headerCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
 
-            <!-- Slide indicators (the little dots at the bottom) -->
+            <!-- Slide indicators (one dot per slide — add/remove to match) -->
             <ol class="carousel-indicators">
               <li data-target="#headerCarousel" data-slide-to="0" class="active"></li>
               <li data-target="#headerCarousel" data-slide-to="1"></li>
-              <li data-target="#headerCarousel" data-slide-to="2"></li>
             </ol>
 
-            <!-- Slides -->
+            <!-- Slides — swap in real images by replacing <img> src values.
+                 Add a new <div class="item"> block for each additional image,
+                 and add a matching <li> dot in the indicators above. -->
             <div class="carousel-inner" role="listbox">
 
               <div class="item active">
-                <!-- Replace this div with an <img> tag when you have a real image -->
-                <div class="slide-placeholder">Slide 1</div>
+                <img src="{{ site.baseurl }}/assets/tb_headshot.png"
+                     alt="Tilden Brooks">
               </div>
 
               <div class="item">
-                <div class="slide-placeholder">Slide 2</div>
-              </div>
-
-              <div class="item">
-                <div class="slide-placeholder">Slide 3</div>
+                <img src="{{ site.baseurl }}/assets/tmg_headshot.png"
+                     alt="Tanajia Moye-Green">
               </div>
 
             </div>
