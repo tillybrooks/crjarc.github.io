@@ -34,10 +34,34 @@ hr.primary {
     border-color: #bd5e39 !important;
 }
 
-/* Navbar active link / hover color */
-#mainNav .navbar-nav > li > a:hover,
-#mainNav .navbar-nav > li > a:focus {
-    color: #bd5e39 !important;
+/* --- Navbar: orange background with white text ---
+   The Creative theme starts the navbar transparent and adds .navbar-shrink
+   on scroll. We override both states to stay orange throughout. */
+#mainNav.navbar-default,
+#mainNav.navbar-default.navbar-shrink {
+    background-color: #bd5e39 !important;
+    border-color: #bd5e39 !important;
+}
+
+/* Brand (site title) and nav links: white text */
+#mainNav.navbar-default .navbar-brand,
+#mainNav.navbar-default .navbar-nav > li > a {
+    color: #fff !important;
+}
+
+/* Slightly translucent on hover instead of the old orange-on-white */
+#mainNav.navbar-default .navbar-nav > li > a:hover,
+#mainNav.navbar-default .navbar-nav > li > a:focus {
+    color: rgba(255, 255, 255, 0.75) !important;
+    background-color: transparent !important;
+}
+
+/* Mobile hamburger button */
+#mainNav.navbar-default .navbar-toggle {
+    border-color: #fff !important;
+}
+#mainNav.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff !important;
 }
 
 /* --- Fix: navbar overlapping the hero header --- */
