@@ -70,6 +70,52 @@ hr.primary {
     padding-top: 34px !important;
 }
 
+/* --- Two-column header layout --- */
+/* Vertically center the text and carousel within the row */
+.header-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Left column: left-align the text (overrides the theme's text-center) */
+.header-text {
+    text-align: left;
+    padding-right: 40px;
+}
+
+/* Right column: some breathing room above on small screens */
+.header-carousel-col {
+    padding-top: 20px;
+}
+
+/* --- Header carousel --- */
+/* Fixed height so all slides are the same size */
+#headerCarousel {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+/* Placeholder slides — replaced by real <img> tags when you have photos */
+.slide-placeholder {
+    height: 320px;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* Make real images fill the carousel height consistently */
+#headerCarousel img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
 /* --- Push hero text away from the left edge --- */
 header {
     margin-left: 10px !important;
