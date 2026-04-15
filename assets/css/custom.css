@@ -93,9 +93,12 @@ hr.primary {
     padding-right: 40px;
 }
 
-/* Pull the header container to the left edge */
+/* Pull the header container flush to the left edge of the viewport.
+   Overrides Bootstrap's default margin: 0 auto centering behavior. */
 .header-content .container {
+    margin-left: 0 !important;
     padding-left: 10px !important;
+    max-width: 100% !important;
 }
 
 /* Right column: some breathing room above on small screens */
