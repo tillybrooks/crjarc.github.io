@@ -73,69 +73,85 @@ hr.primary {
     background-color: #fff !important;
 }
 
-/* --- Fix: navbar overlapping the hero header --- */
+/* --- Navbar-to-header gap: ~10px to match left margin --- */
 .header-content {
-    padding-top: 34px !important;
+    padding-top: 10px !important;
 }
 
 /* --- Two-column header layout --- */
-/* Vertically center the text and carousel within the row */
 .header-row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
-/* Left column: left-align the text, hugging the left margin */
+/* Left column: flush left, no hr, tighter h1-to-p spacing */
 .header-text {
     text-align: left;
     padding-left: 0 !important;
     padding-right: 40px;
 }
+.header-text h1 {
+    margin-bottom: 8px !important;
+}
+.header-text p {
+    margin-top: 0 !important;
+}
 
-/* Pull the header container flush to the left edge of the viewport.
-   Overrides Bootstrap's default margin: 0 auto centering behavior. */
+/* Pull the header container flush to the left edge */
 .header-content .container {
     margin-left: 0 !important;
     padding-left: 10px !important;
     max-width: 100% !important;
 }
 
-/* Right column: some breathing room above on small screens */
+/* Right column: vertical padding around the carousel+caption block */
 .header-carousel-col {
-    padding-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-/* --- Header carousel --- */
-/* Fixed height so all slides are the same size */
-#headerCarousel {
+/* --- Carousel + caption panel side by side --- */
+.carousel-with-caption {
+    display: flex;
+    align-items: stretch;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 4px 24px rgba(0,0,0,0.3);
 }
 
-/* Placeholder slides — replaced by real <img> tags when you have photos */
-.slide-placeholder {
-    height: 320px;
-    background: rgba(255, 255, 255, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 18px;
-    letter-spacing: 1px;
+/* Image carousel takes up ~65% of the combined width */
+.carousel-image-panel {
+    flex: 2;
 }
 
-/* Make real images fill the carousel height consistently */
+#headerCarousel {
+    height: 100%;
+}
+
+/* Images fill the carousel consistently */
 #headerCarousel img {
     width: 100%;
     height: 320px;
     object-fit: cover;
 }
 
-/* --- Push hero text away from the left edge --- */
-header {
-    margin-left: 10px !important;
+/* Caption panel: ~35% width, semi-transparent dark background */
+.carousel-caption-panel {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 24px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-caption-panel p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
 }
 
 /* --- Space between the hero "Learn More" button and the first section ---
