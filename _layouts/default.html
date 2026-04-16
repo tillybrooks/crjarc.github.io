@@ -69,14 +69,58 @@
 
     <!-- =====================================================
       FOOTER
-      Simple centered copyright line.
-      Edit the text here if you want something different.
+      Three-column layout:
+        Left   — site name, tagline, institutional affiliations
+        Center — quick navigation links
+        Right  — contact info
+      Bottom bar — copyright
+      Edit placeholder text directly here in default.html.
     ===================================================== -->
-    <footer>
-        <div class="container text-center">
-            <p>
-                &copy; {{ site.title }} {{ "now" | date: "%Y" }}
-            </p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row footer-main">
+
+                <!-- Left: identity + affiliations -->
+                <div class="col-md-4 footer-col">
+                    <h4>California Racial Justice Act<br>Research Collective</h4>
+                    <p>Interdisciplinary research supporting the implementation of California's landmark Racial Justice Act.</p>
+                    <p class="footer-affiliations">
+                        <span>[Placeholder: Institutional affiliation 1]</span><br>
+                        <span>[Placeholder: Institutional affiliation 2]</span>
+                    </p>
+                </div>
+
+                <!-- Center: quick links -->
+                <div class="col-md-4 footer-col footer-links">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#our-work">Our Work</a></li>
+                        <li><a href="#mission">Mission</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#work-with-us">Work With Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Right: contact -->
+                <div class="col-md-4 footer-col">
+                    <h4>Contact</h4>
+                    <p>[Placeholder: A brief line inviting visitors to reach out.]</p>
+                    <p>
+                        <a href="mailto:your@email.edu">your@email.edu</a>
+                    </p>
+                    <p class="footer-affiliations">[Placeholder: Mailing address or department, if applicable]</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; {{ "now" | date: "%Y" }} California Racial Justice Act Research Collective. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 

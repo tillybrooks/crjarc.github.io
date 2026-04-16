@@ -102,11 +102,16 @@ hr.primary {
     background-color: #fff !important;
 }
 
-/* --- Header height: override the theme JS that sets it to full viewport ---
-   Setting height/min-height to auto forces the header to shrink to its content. */
+/* --- Header height + background gradient ---
+   Overrides the Creative theme's default stock photo with a gradient
+   that uses the site's color palette: deep brown on the left (where the
+   text sits, giving strong contrast for white text) warming to a richer
+   brown-orange toward the right. */
 header {
     height: auto !important;
     min-height: 0 !important;
+    background-image: linear-gradient(120deg, #1a0a03 0%, #5c2e0e 50%, #9e4a25 100%) !important;
+    background-attachment: scroll !important;
 }
 
 .header-content {
@@ -245,6 +250,71 @@ section {
     max-width: 1000px !important;
     padding-left: 50px !important;
     padding-right: 50px !important;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: #1a0a03;
+    color: rgba(255,255,255,0.75);
+    font-family: 'Lato', sans-serif;
+}
+
+.footer-main {
+    padding: 60px 0 40px;
+}
+
+.footer-col h4 {
+    font-family: 'Merriweather', Georgia, serif;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.65);
+}
+
+.footer-affiliations {
+    font-size: 13px !important;
+    color: rgba(255,255,255,0.45) !important;
+    margin-top: 12px;
+}
+
+/* Quick links */
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+.footer-links ul li a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+.footer-links ul li a:hover {
+    color: #bd5e39;
+}
+
+/* Contact email link */
+.site-footer a {
+    color: rgba(255,255,255,0.65);
+}
+.site-footer a:hover {
+    color: #bd5e39;
+    text-decoration: none;
+}
+
+/* Bottom copyright bar */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 0;
+}
+.footer-bottom p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    margin: 0;
 }
 
 /* --- Responsive: scale back on smaller screens --- */
