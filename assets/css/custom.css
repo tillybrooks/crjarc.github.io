@@ -210,12 +210,12 @@ header {
 #headerCarousel,
 #headerCarousel .carousel-inner,
 #headerCarousel .carousel-inner .item {
-    height: 380px;
+    height: 760px;
 }
 
 #headerCarousel img {
     width: 100%;
-    height: 750px;
+    height: 350px;
     object-fit: cover;
     display: block;
 }
