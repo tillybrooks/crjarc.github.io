@@ -90,34 +90,67 @@ header {
 /* --- Two-column header layout --- */
 .header-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
-/* Left column: flush left, tighter h1-to-p spacing */
+/* Left column: flush left, aligned to carousel top */
 .header-text {
     text-align: left;
     padding-left: 0 !important;
     padding-right: 40px;
+    padding-top: 60px;
 }
 .header-text h1 {
     margin-bottom: 8px !important;
 }
 .header-text p {
     margin-top: 0 !important;
+    margin-bottom: 20px !important;
 }
 
-/* Pull the header container flush to the left edge */
+/* Focus area tags */
+.header-tags {
+    margin-bottom: 24px;
+}
+.header-tag {
+    display: inline-block;
+    margin: 0 6px 8px 0;
+    padding: 4px 12px;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 20px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.5px;
+}
+
+/* "Learn More" button in header */
+.header-cta {
+    font-size: 16px !important;
+    padding: 10px 28px !important;
+    border-color: #fff !important;
+    color: #fff !important;
+    background: transparent !important;
+}
+.header-cta:hover {
+    background: rgba(255,255,255,0.15) !important;
+}
+
+/* Pull the header container flush to the left edge, no right padding
+   so the carousel bleeds to the browser edge */
 .header-content .container {
     margin-left: 0 !important;
     padding-left: 25px !important;
+    padding-right: 0 !important;
     max-width: 100% !important;
 }
 
-/* Right column: vertical padding around the carousel+caption block */
+/* Right column: top padding aligns carousel with header text,
+   no right gutter so it reaches the browser edge */
 .header-carousel-col {
-    padding-top: 30px;
+    padding-top: 60px;
     padding-bottom: 30px;
+    padding-right: 0 !important;
 }
 
 /* --- Carousel + caption panel side by side ---
