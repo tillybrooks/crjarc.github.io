@@ -73,9 +73,18 @@ hr.primary {
     background-color: #fff !important;
 }
 
-/* --- Navbar-to-header gap: ~10px to match left margin --- */
+/* --- Header height: override the theme JS that sets it to full viewport ---
+   Setting height/min-height to auto forces the header to shrink to its content. */
+header {
+    height: auto !important;
+    min-height: 0 !important;
+}
+
 .header-content {
     padding-top: 10px !important;
+    padding-bottom: 20px !important;
+    min-height: 0 !important;
+    height: auto !important;
 }
 
 /* --- Two-column header layout --- */
@@ -85,7 +94,7 @@ hr.primary {
     flex-wrap: wrap;
 }
 
-/* Left column: flush left, no hr, tighter h1-to-p spacing */
+/* Left column: flush left, tighter h1-to-p spacing */
 .header-text {
     text-align: left;
     padding-left: 0 !important;
@@ -101,7 +110,7 @@ hr.primary {
 /* Pull the header container flush to the left edge */
 .header-content .container {
     margin-left: 0 !important;
-    padding-left: 10px !important;
+    padding-left: 25px !important;
     max-width: 100% !important;
 }
 
@@ -111,35 +120,41 @@ hr.primary {
     padding-bottom: 30px;
 }
 
-/* --- Carousel + caption panel side by side --- */
+/* --- Carousel + caption panel side by side ---
+   min-width: 0 on each child is the critical fix: without it, Bootstrap's
+   width: 100% on .carousel-inner overflows the flex item and pushes the
+   caption panel onto a new line. */
 .carousel-with-caption {
     display: flex;
+    flex-direction: row;
     align-items: stretch;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 4px 24px rgba(0,0,0,0.3);
 }
 
-/* Image carousel takes up ~65% of the combined width */
 .carousel-image-panel {
-    flex: 2;
+    flex: 0 0 65%;
+    min-width: 0;
+    overflow: hidden;
 }
 
 #headerCarousel {
-    height: 100%;
+    width: 100%;
 }
 
-/* Images fill the carousel consistently */
 #headerCarousel img {
     width: 100%;
     height: 320px;
     object-fit: cover;
+    display: block;
 }
 
-/* Caption panel: ~35% width, semi-transparent dark background */
+/* Caption panel: fixed 35% width, semi-transparent dark background */
 .carousel-caption-panel {
-    flex: 1;
-    background: rgba(0, 0, 0, 0.45);
+    flex: 0 0 35%;
+    min-width: 0;
+    background: #5c2e0e;
     padding: 24px 20px;
     display: flex;
     align-items: center;
