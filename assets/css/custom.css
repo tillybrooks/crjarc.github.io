@@ -87,83 +87,69 @@ header {
     height: auto !important;
 }
 
-/* --- Two-column header layout --- */
+/* --- Two-column header: true split-screen ---
+   Row stretches to a fixed height; the right column fills it completely. */
 .header-row {
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    min-height: 420px;
 }
 
-/* Left column: flush left, aligned to carousel top */
+/* Left column: vertically centered, flush left */
 .header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
     padding-left: 0 !important;
     padding-right: 40px;
-    padding-top: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .header-text h1 {
     margin-bottom: 8px !important;
 }
 .header-text p {
     margin-top: 0 !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 24px !important;
 }
 
-/* Focus area tags */
-.header-tags {
-    margin-bottom: 24px;
-}
-.header-tag {
-    display: inline-block;
-    margin: 0 6px 8px 0;
-    padding: 4px 12px;
-    border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 20px;
-    font-size: 13px;
-    color: rgba(36,6,6,0.85);
-    letter-spacing: 0.5px;
-}
-
-/* "Learn More" button in header */
+/* "Learn More" button */
 .header-cta {
     font-size: 16px !important;
     padding: 10px 28px !important;
     border-color: #fff !important;
     color: #fff !important;
     background: transparent !important;
+    align-self: flex-start;
 }
 .header-cta:hover {
     background: rgba(255,255,255,0.15) !important;
 }
 
-/* Pull the header container flush to the left edge, no right padding
-   so the carousel bleeds to the browser edge */
+/* Pull the header container flush to the left, no right padding */
 .header-content .container {
     margin-left: 0 !important;
     padding-left: 25px !important;
     padding-right: 0 !important;
+    width: 100% !important;
     max-width: 100% !important;
 }
 
-/* Right column: top padding aligns carousel with header text,
-   no right gutter so it reaches the browser edge */
+/* Right column: zero padding so the panel fills to the browser edge */
 .header-carousel-col {
-    padding-top: 60px;
-    padding-bottom: 30px;
-    padding-right: 0 !important;
+    padding: 0 !important;
+    display: flex;
 }
 
-/* --- Carousel + caption panel side by side ---
-   min-width: 0 on each child is the critical fix: without it, Bootstrap's
-   width: 100% on .carousel-inner overflows the flex item and pushes the
-   caption panel onto a new line. */
+/* --- Full-height carousel + caption panel --- */
 .carousel-with-caption {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
-    border-radius: 6px;
+    flex: 1;
     overflow: hidden;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.25);
 }
 
 .carousel-image-panel {
@@ -172,18 +158,21 @@ header {
     overflow: hidden;
 }
 
-#headerCarousel {
-    width: 100%;
+/* Cascade height through Bootstrap's carousel layers so images fill fully */
+#headerCarousel,
+#headerCarousel .carousel-inner,
+#headerCarousel .carousel-inner .item {
+    height: 100%;
 }
 
 #headerCarousel img {
     width: 100%;
-    height: 320px;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
 
-/* Caption panel: fixed 35% width, semi-transparent dark background */
+/* Caption panel: brown, fills remaining 35% */
 .carousel-caption-panel {
     flex: 0 0 35%;
     min-width: 0;
