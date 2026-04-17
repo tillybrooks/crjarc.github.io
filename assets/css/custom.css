@@ -27,11 +27,11 @@ p, li {
 
 /* Right-justify list contents and paragraphs within lists */
 ul, ol {
-    text-align: right;
+    text-align: left;
 }
 ul p, ol p,
 ul li, ol li {
-    text-align: right;
+    text-align: left;
 }
 
 /* Navbar and buttons stay in Lato — serifs don't read as well at small UI sizes */
