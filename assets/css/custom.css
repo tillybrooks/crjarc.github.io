@@ -20,6 +20,20 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', Georgia, serif;
 }
 
+/* Base content font size */
+p, li {
+    font-size: 20px;
+}
+
+/* Right-justify list contents and paragraphs within lists */
+ul, ol {
+    text-align: right;
+}
+ul p, ol p,
+ul li, ol li {
+    text-align: right;
+}
+
 /* Navbar and buttons stay in Lato — serifs don't read as well at small UI sizes */
 #mainNav,
 .btn {
